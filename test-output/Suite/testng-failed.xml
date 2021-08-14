@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test name="Test(failed)" parallel="methods">
+    <parameter name="BROWSER" value="chrome"/>
+    <parameter name="PASSWORD" value="EqemYgE"/>
+    <parameter name="USERNAME" value="mngr347104"/>
+    <classes>
+      <class name="com.qa.testCases.LoginTest">
+        <methods>
+          <include name="loginVerify"/>
+          <include name="loginVerify2" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.testCases.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
