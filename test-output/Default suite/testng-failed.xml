@@ -7,7 +7,9 @@
         <methods>
           <include name="verifyManager2"/>
           <include name="setExtentReport"/>
+          <include name="verifyManager3"/>
           <include name="endReport"/>
+          <include name="skipped"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

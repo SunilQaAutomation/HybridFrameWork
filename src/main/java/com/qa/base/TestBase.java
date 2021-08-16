@@ -3,6 +3,7 @@ package com.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -19,7 +21,11 @@ import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.util.TestUtil;
@@ -42,6 +48,7 @@ public class TestBase {
 	public void setExtentReport() {
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Reports/ExtentReport.html");
 
+		htmlReporter.config().setEncoding("utf-8");
 		htmlReporter.config().setDocumentTitle("Automaton Report");
 		htmlReporter.config().setReportName("Functionl Report");
 		htmlReporter.config().setTheme(Theme.DARK);
@@ -61,29 +68,49 @@ public class TestBase {
 		extent.flush();
 
 	}
-	
-	
+
 	@AfterMethod
 	public void tearDown(ITestResult result) throws IOException {
+		String methodName = result.getMethod().getMethodName();
+		String className = result.getTestClass().getName();
+
 		if (result.getStatus() == ITestResult.FAILURE) {
-			test.log(Status.FAIL, "TEST CASE FAILED IS : " + result.getName());
-			test.log(Status.FAIL, "TEST CASE FAILED WITH THE ASSERTION : " + result.getThrowable());
-			test.log(Status.FAIL, "TEST CASE FAILED IN THE CLASS : " + result.getTestClass());
-			
-			
+
+			String errorMessage = result.getThrowable().getMessage();
+			String exceptoinMessage = Arrays.toString(result.getThrowable().getStackTrace());
+
+			test.fail("<details><summary><b><font color=red><u>Exception Occured, Click on to see details:"
+					+ "</u></font></b></summary>+" + errorMessage.replaceAll(",", "<br>") + "\n"
+					+ exceptoinMessage.replaceAll(",", "<br>") + "</details> \n");
+
 			String screenShotPath = TestUtil.takeScreenshotAtEndOfTest(driver, result.getName());
-			test.addScreenCaptureFromPath(screenShotPath);
+			try {
+				test.fail("<b><font color=red>" + "Screen shot of failure " + "</font></b>",
+						MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build());
+			} catch (IOException e) {
+				test.fail("Test Failed, Cannot attach the Screenshot");
+			}
+
+			// test.addScreenCaptureFromPath(screenShotPath);
+
+			String logText = "<b>Test Method " + methodName + " is Failed form the class " + className + "</b>";
+			Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
+			test.log(Status.FAIL, m);
 
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			test.log(Status.PASS, "TEST CASE PASSED IS : " + result.getName());
+
+			String logText = "<b>Test Method " + methodName + " is Successful form the class " + className + "</b>";
+			Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
+			test.log(Status.PASS, m);
+
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			test.log(Status.SKIP, "TEST CASE SKIIPED IS : " + result.getName());
+			String logText = "<b>Test Method " + methodName + " is Skipped form the class " + className + "</b>";
+			Markup m = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
+			test.log(Status.SKIP, m);
 		}
 
 		driver.quit();
 	}
-
-
 
 	public TestBase() {
 		prop = new Properties();
