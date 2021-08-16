@@ -74,7 +74,7 @@ public class LoginPage extends TestBase {
 		clickOnProceed();
 	//	test.info("Entering username");
 		enterUsreid(name);
-	//	test.info("entering password");
+//		test.info("entering password");
 		enterPassword(password);
 	//	test.info("Clicking on the login Button");
 		clickOnLogin();

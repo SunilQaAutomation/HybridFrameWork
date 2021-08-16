@@ -1,40 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="1" failed="2" ignored="0" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43983" started-at="2021-08-13T13:36:35Z" finished-at="2021-08-13T13:37:19Z">
+  <suite name="Default suite" duration-ms="127640" started-at="2021-08-16T17:29:54Z" finished-at="2021-08-16T17:32:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43983" started-at="2021-08-13T13:36:35Z" finished-at="2021-08-13T13:37:19Z">
+    <test name="Default test" duration-ms="127640" started-at="2021-08-16T17:29:54Z" finished-at="2021-08-16T17:32:02Z">
       <class name="com.qa.testCases.HomePageTest">
-        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="setExtentReport" is-config="true" duration-ms="186" started-at="2021-08-13T19:06:35Z" finished-at="2021-08-13T19:06:35Z">
+        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="setExtentReport" is-config="true" duration-ms="282" started-at="2021-08-16T22:59:54Z" finished-at="2021-08-16T22:59:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtentReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="31130" started-at="2021-08-13T19:06:35Z" finished-at="2021-08-13T19:07:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="setUp" is-config="true" duration-ms="30936" started-at="2021-08-16T22:59:55Z" finished-at="2021-08-16T23:00:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyManager1()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="verifyManager1" duration-ms="169" started-at="2021-08-13T19:07:06Z" finished-at="2021-08-13T19:07:07Z">
+        <test-method status="SKIP" signature="skipped()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="skipped" duration-ms="7" started-at="2021-08-16T23:00:26Z" finished-at="2021-08-16T23:00:26Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Test Method is skipped]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Test Method is skipped
+	at com.qa.testCases.HomePageTest.skipped(HomePageTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyManager1 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="808" started-at="2021-08-13T19:07:07Z" finished-at="2021-08-13T19:07:07Z">
+        </test-method> <!-- skipped -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="tearDown" is-config="true" duration-ms="753" started-at="2021-08-16T23:00:26Z" finished-at="2021-08-16T23:00:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManager1 status=SUCCESS method=HomePageTest.verifyManager1()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43] output={null}]]]>
+                <![CDATA[[TestResult name=skipped status=SKIP method=HomePageTest.skipped()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="setUp" is-config="true" duration-ms="10290" started-at="2021-08-13T19:07:07Z" finished-at="2021-08-13T19:07:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="setUp" is-config="true" duration-ms="32270" started-at="2021-08-16T23:00:26Z" finished-at="2021-08-16T23:00:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="verifyManager2()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="verifyManager2" duration-ms="83" started-at="2021-08-13T19:07:18Z" finished-at="2021-08-13T19:07:18Z">
+        <test-method status="PASS" signature="verifyManager1()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="verifyManager1" duration-ms="144" started-at="2021-08-16T23:00:59Z" finished-at="2021-08-16T23:00:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManager1 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="tearDown" is-config="true" duration-ms="754" started-at="2021-08-16T23:00:59Z" finished-at="2021-08-16T23:00:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyManager1 status=SUCCESS method=HomePageTest.verifyManager1()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="setUp" is-config="true" duration-ms="30656" started-at="2021-08-16T23:00:59Z" finished-at="2021-08-16T23:01:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="verifyManager2()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="verifyManager2" duration-ms="81" started-at="2021-08-16T23:01:30Z" finished-at="2021-08-16T23:01:30Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Manger Id : mngr347105] but found [Manger Id : mngr347104]]]>
@@ -47,7 +101,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:115)
 	at org.testng.Assert.assertEquals(Assert.java:189)
 	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.qa.testCases.HomePageTest.verifyManager2(HomePageTest.java:51)
+	at com.qa.testCases.HomePageTest.verifyManager2(HomePageTest.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -79,18 +133,78 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyManager2 -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="tearDown" is-config="true" duration-ms="1050" started-at="2021-08-13T19:07:18Z" finished-at="2021-08-13T19:07:19Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="tearDown" is-config="true" duration-ms="1020" started-at="2021-08-16T23:01:30Z" finished-at="2021-08-16T23:01:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyManager2 status=FAILURE method=HomePageTest.verifyManager2()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43] output={null}]]]>
+                <![CDATA[[TestResult name=verifyManager2 status=FAILURE method=HomePageTest.verifyManager2()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.qa.testCases.HomePageTest@7cd62f43]" name="endReport" is-config="true" duration-ms="248" started-at="2021-08-13T19:07:19Z" finished-at="2021-08-13T19:07:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="setUp" is-config="true" duration-ms="29358" started-at="2021-08-16T23:01:31Z" finished-at="2021-08-16T23:02:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="verifyManager3()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="verifyManager3" duration-ms="86" started-at="2021-08-16T23:02:01Z" finished-at="2021-08-16T23:02:01Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Manger Id : mngr347108] but found [Manger Id : mngr347104]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Manger Id : mngr347108] but found [Manger Id : mngr347104]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at com.qa.testCases.HomePageTest.verifyManager3(HomePageTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManager3 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="tearDown" is-config="true" duration-ms="1003" started-at="2021-08-16T23:02:01Z" finished-at="2021-08-16T23:02:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyManager3 status=FAILURE method=HomePageTest.verifyManager3()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.qa.testCases.HomePageTest@6093dd95]" name="endReport" is-config="true" duration-ms="263" started-at="2021-08-16T23:02:02Z" finished-at="2021-08-16T23:02:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
