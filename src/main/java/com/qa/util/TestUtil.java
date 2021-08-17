@@ -19,7 +19,7 @@ import com.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
 
-	public static String takeScreenshotAtEndOfTest(WebDriver driver, String screenshotName) throws IOException {
+	public static String takeScreenshotAtEndOfTest(WebDriver driver, String screenshotName)  {
 
 		String datename = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
@@ -29,7 +29,12 @@ public class TestUtil extends TestBase {
 		
 	
 		File finalDestination = new File(destination);
-		FileUtils.copyFile(source, finalDestination);
+		try {
+			FileUtils.copyFile(source, finalDestination);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return destination;
 
 	}

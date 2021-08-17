@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
   <test name="Test(failed)" parallel="methods">
-    <parameter name="BROWSER" value="chrome"/>
-    <parameter name="PASSWORD" value="EqemYgE"/>
-    <parameter name="USERNAME" value="mngr347104"/>
     <classes>
-      <class name="com.qa.testCases.LoginTest">
+      <class name="com.qa.testCases.HomePageTest">
         <methods>
-          <include name="loginVerify"/>
-          <include name="loginVerify2" invocation-numbers="0"/>
-          <include name="tearDown"/>
+          <include name="verifyManager2"/>
+          <include name="setExtentReport"/>
+          <include name="verifyManager3"/>
+          <include name="endReport"/>
+          <include name="skipped"/>
+          <include name="verifyManager1"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.testCases.LoginTest -->
+      </class> <!-- com.qa.testCases.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

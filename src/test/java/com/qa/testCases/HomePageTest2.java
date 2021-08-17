@@ -8,14 +8,16 @@ import org.testng.annotations.Test;
 import com.qa.base.TestBase;
 import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
+/*
+ * This class having the tests to create the extent report using Listener
+ */
 
-
-public class HomePageTest extends TestBase {
+public class HomePageTest2 extends TestBase {
 
 	LoginPage longinpage;
 	HomePage homepage;
 
-	public HomePageTest() {
+	public HomePageTest2() {
 		super();
 	}
 
@@ -29,9 +31,6 @@ public class HomePageTest extends TestBase {
 
 	@Test
 	public void verifyManager1() {
-			
-		System.out.println("I am in the thread: " +Thread.currentThread().getId());
-		test = extent.createTest("verifyManager3");
 	//	test.createNode("With the Valid inputs");
 		test.info("Verifying login manger title");
 		Assert.assertEquals(homepage.getManagerTitle(), "Manger Id : mngr347104");
@@ -41,9 +40,7 @@ public class HomePageTest extends TestBase {
 	
 	@Test
 	public void verifyManager2() {
-		System.out.println("I am in the thread: " +Thread.currentThread().getId());
-		test = extent.createTest("verifyManager2");
-	//	test.createNode("with Invalid inputs");
+		//	test.createNode("with Invalid inputs");
 		test.info("Verifying login manger title");
 		Assert.assertEquals(homepage.getManagerTitle(), "Manger Id : mngr347105");
 		test.info("Manager is verified");
@@ -52,16 +49,13 @@ public class HomePageTest extends TestBase {
 	
 	@Test
 	public void skipped() {
-		System.out.println("I am in the thread: " +Thread.currentThread().getId());
 		test=extent.createTest("Skipped");
 		throw new SkipException("Test Method is skipped");
 	}
 	
 	@Test
 	public void verifyManager3() {
-		System.out.println("I am in the thread: " +Thread.currentThread().getId());
-		test = extent.createTest("verifyManager2");
-	//	test.createNode("with Invalid inputs");
+			//	test.createNode("with Invalid inputs");
 		test.info("Verifying login manger title");
 		Assert.assertEquals(homepage.getManagerTitle(), "Manger Id : mngr347108");
 		test.info("Manager is verified");
