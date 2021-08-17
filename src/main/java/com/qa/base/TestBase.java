@@ -44,6 +44,9 @@ public class TestBase {
 	public ExtentReports extent;
 	public ExtentTest test;
 
+	// This method is used to create the HTML Extent Report and seting the
+	// Environment Details
+	
 	@BeforeTest
 	public void setExtentReport() {
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Reports/ExtentReport.html");
@@ -63,13 +66,18 @@ public class TestBase {
 
 	}
 
+	// This method is used to flush the report at the end of test
+
 	@AfterTest
 	public void endReport() {
 		extent.flush();
 
 	}
 
-	@AfterMethod
+	// This method is used to update the stauts at the end of the test in the Extent
+	// Report
+	
+   @AfterMethod
 	public void tearDown(ITestResult result) throws IOException {
 		String methodName = result.getMethod().getMethodName();
 		String className = result.getTestClass().getName();
@@ -112,6 +120,7 @@ public class TestBase {
 		driver.quit();
 	}
 
+	// This Constructor helps to initilise the properties file
 	public TestBase() {
 		prop = new Properties();
 		try {
@@ -129,6 +138,8 @@ public class TestBase {
 		}
 	}
 
+	// This Method helps to initiase the Browser and also create the WebDriver
+	// Listeners
 	public static void initilization() {
 
 		String browserName = prop.getProperty("browser");
@@ -162,5 +173,8 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 	}
+	
+	
+	
 
 }
