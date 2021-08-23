@@ -39,6 +39,8 @@ public class TestBase {
 	public static WebDriver driver;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventlistener;
+	//public static String browserName;
+	
 
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
@@ -125,7 +127,7 @@ public class TestBase {
 		prop = new Properties();
 		try {
 			FileInputStream ip = new FileInputStream(
-					"C:\\Selenium_WorkSpace\\com.qa.HybridFrameWORK\\src\\main\\java\\com\\qa\\config\\config.properties");
+					"C:\\Selenium_WorkSpace\\HybridFrameWork\\src\\main\\java\\com\\qa\\config\\config.properties");
 			try {
 				prop.load(ip);
 			} catch (IOException e) {
@@ -142,7 +144,7 @@ public class TestBase {
 	// Listeners
 	public static void initilization() {
 
-		String browserName = prop.getProperty("browser");
+		String  browserName = prop.getProperty("browser");
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");

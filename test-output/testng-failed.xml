@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
-  <test name="Test(failed)" parallel="methods">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testCases.HomePageTest">
+      <class name="com.qa.testCases.LoginTest">
         <methods>
-          <include name="verifyManager2"/>
-          <include name="setExtentReport"/>
-          <include name="verifyManager3"/>
-          <include name="endReport"/>
-          <include name="skipped"/>
-          <include name="verifyManager1"/>
           <include name="setUp"/>
+          <include name="endReport"/>
+          <include name="loginVerif2"/>
+          <include name="setExtentReport"/>
           <include name="tearDown"/>
+          <include name="loginVerify"/>
         </methods>
-      </class> <!-- com.qa.testCases.HomePageTest -->
+      </class> <!-- com.qa.testCases.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

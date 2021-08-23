@@ -1,21 +1,17 @@
 package com.qa.testCases;
 
-import java.io.IOException;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
+
 import com.qa.base.TestBase;
 import com.qa.pages.LoginPage;
-import com.qa.util.TestUtil;
+
 
 public class LoginTest extends TestBase {
 
-	LoginPage loginpage;
+	public LoginPage loginpage;
 
 	public LoginTest() {
 		super();
